@@ -7,7 +7,7 @@ A fully responsive website template with:
 - About & Services sections
 - Contact form
 
-🔗 [Live Demo](#############)
+🔗 [Live Demo](https://cjangon14.github.io/Website-Template/)
 
 ## Features
 - Clean, modern design

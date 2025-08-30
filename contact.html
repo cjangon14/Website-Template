@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — NovaKit</title>
+  <meta name="description" content="Contact form with client-side validation and ARIA states." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-logo" aria-hidden="true">✦</span> NovaKit</a>
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+          <li><button id="theme-toggle" class="btn btn-ghost" aria-label="Toggle theme">🌓</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container grid-2">
+      <div>
+        <h1>Let’s talk</h1>
+        <p class="muted">This form validates on the client and shows inline errors. Plug it into your backend or use Netlify / Formspree.</p>
+        <ul class="contact-points">
+          <li>📧 hello@novakit.dev</li>
+          <li>📍 Cavite, PH</li>
+          <li>⏰ Mon–Fri, 9:00–18:00</li>
+        </ul>
+      </div>
+
+      <form id="contact-form" class="card form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" required />
+          <small class="error" id="err-name"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <small class="error" id="err-email"></small>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" minlength="10" required></textarea>
+          <small class="error" id="err-message"></small>
+        </div>
+
+        <button class="btn">Send Message</button>
+        <p class="small muted" id="contact-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-logo" aria-hidden="true">✦</span> NovaKit</a>
+        <p class="muted small">© <span id="year"></span> NovaKit.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <form class="newsletter" id="newsletter-form" novalidate>
+        <label for="nl-email" class="small">Join our newsletter</label>
+        <div class="input-row">
+          <input id="nl-email" name="email" type="email" placeholder="you@example.com" required />
+          <button class="btn">Subscribe</button>
+        </div>
+        <p id="nl-feedback" class="small muted" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

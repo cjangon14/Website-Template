@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaKit Blog</title>
+  <meta name="description" content="Articles rendered from JSON to show JS skills." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-logo" aria-hidden="true">✦</span> NovaKit</a>
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a class="active" href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button id="theme-toggle" class="btn btn-ghost" aria-label="Toggle theme">🌓</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <header class="section-header">
+        <h1>Blog</h1>
+        <p class="muted">Rendered from a JSON array in <code>script.js</code> — no backend required.</p>
+      </header>
+
+      <div id="blog-list" class="grid-3 blog-grid" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-logo" aria-hidden="true">✦</span> NovaKit</a>
+        <p class="muted small">© <span id="year"></span> NovaKit.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a class="active" href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <form class="newsletter" id="newsletter-form" novalidate>
+        <label for="nl-email" class="small">Join our newsletter</label>
+        <div class="input-row">
+          <input id="nl-email" name="email" type="email" placeholder="you@example.com" required />
+          <button class="btn">Subscribe</button>
+        </div>
+        <p id="nl-feedback" class="small muted" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

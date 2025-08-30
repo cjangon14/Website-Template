@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaKit — SaaS Template</title>
+  <meta name="description" content="A clean, responsive SaaS landing template with blog and contact." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="NovaKit Home">
+        <span class="brand-logo" aria-hidden="true">✦</span> NovaKit
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <button id="theme-toggle" class="btn btn-ghost" aria-label="Toggle theme">🌓</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="section hero">
+      <div class="container grid-2">
+        <div>
+          <h1>Ship faster with <span class="text-gradient">NovaKit</span></h1>
+          <p class="lead">
+            A minimal starter to showcase your front-end skills—responsive layout,
+            accessible components, and real interactivity.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#pricing">Get Started</a>
+            <a class="btn btn-ghost" href="#features">See Features</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>98%</strong><span>CSAT</span></div>
+            <div><strong>2k+</strong><span>Deploys</span></div>
+            <div><strong>120ms</strong><span>TTFB</span></div>
+          </div>
+        </div>
+        <div class="hero-card" role="img" aria-label="Product preview: analytics dashboard">
+          <div class="card">
+            <header class="card-header">
+              <h3>Live Analytics</h3>
+              <span class="badge">Realtime</span>
+            </header>
+            <div class="card-body">
+              <div class="meter"><span style="width: 72%"></span></div>
+              <div class="mini-grid">
+                <div class="stat"><small>Users</small><strong>1,284</strong></div>
+                <div class="stat"><small>Bounce</small><strong>18%</strong></div>
+                <div class="stat"><small>Revenue</small><strong>$7.9k</strong></div>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <button class="btn small" data-demo="pulse">Pulse</button>
+              <button class="btn btn-ghost small" data-demo="reset">Reset</button>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Everything you need to launch</h2>
+          <p class="muted">Reusable, accessible, and modern UI blocks.</p>
+        </header>
+
+        <div class="features grid-3">
+          <article class="feature">
+            <div class="icon">⚡</div>
+            <h3>Performance</h3>
+            <p>Lightweight, no frameworks required. Core Web Vitals friendly.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">🔒</div>
+            <h3>Accessible</h3>
+            <p>Keyboard support, ARIA, and color contrast baked in.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">🧩</div>
+            <h3>Composable</h3>
+            <p>Drop-in sections: hero, pricing, FAQ, blog, contact.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">🌗</div>
+            <h3>Dark Mode</h3>
+            <p>System-aware theme with local storage persistence.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">📱</div>
+            <h3>Responsive</h3>
+            <p>Mobile-first with fluid typography and grid utilities.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">🛠️</div>
+            <h3>Practical JS</h3>
+            <p>Accordions, toggles, form validation & demo widgets.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>Simple, transparent pricing</h2>
+          <p class="muted">Switch between monthly and yearly.</p>
+        </header>
+
+        <div class="pricing-toggle" role="group" aria-label="Billing period">
+          <span>Monthly</span>
+          <label class="switch">
+            <input id="billing-toggle" type="checkbox" aria-label="Toggle yearly billing" />
+            <span class="slider"></span>
+          </label>
+          <span>Yearly <small class="save">save 20%</small></span>
+        </div>
+
+        <div class="pricing grid-3">
+          <article class="plan">
+            <h3>Starter</h3>
+            <p class="muted">For personal projects</p>
+            <div class="price"><span class="currency">$</span><span class="amount" data-month="9" data-year="86">9</span><span class="period">/mo</span></div>
+            <ul class="features-list">
+              <li>1 project</li>
+              <li>Community support</li>
+              <li>Basic analytics</li>
+            </ul>
+            <button class="btn block">Choose Starter</button>
+          </article>
+
+          <article class="plan featured" aria-label="Recommended plan">
+            <div class="ribbon">Most Popular</div>
+            <h3>Pro</h3>
+            <p class="muted">For growing apps</p>
+            <div class="price"><span class="currency">$</span><span class="amount" data-month="29" data-year="278">29</span><span class="period">/mo</span></div>
+            <ul class="features-list">
+              <li>Unlimited projects</li>
+              <li>Priority support</li>
+              <li>Advanced analytics</li>
+            </ul>
+            <button class="btn block">Choose Pro</button>
+          </article>
+
+          <article class="plan">
+            <h3>Business</h3>
+            <p class="muted">For teams</p>
+            <div class="price"><span class="currency">$</span><span class="amount" data-month="99" data-year="950">99</span><span class="period">/mo</span></div>
+            <ul class="features-list">
+              <li>SSO & roles</li>
+              <li>99.9% uptime SLA</li>
+              <li>Dedicated success</li>
+            </ul>
+            <button class="btn block">Choose Business</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Frequently asked questions</h2>
+        </header>
+
+        <div class="accordion" id="faq">
+          <details>
+            <summary>Can I use this in my portfolio?</summary>
+            <p>Yes. Clone, modify, and ship. Add your own branding and sections.</p>
+          </details>
+          <details>
+            <summary>How do I deploy?</summary>
+            <p>Static hosting works great (Vercel, Netlify, GitHub Pages). No server needed.</p>
+          </details>
+          <details>
+            <summary>Is there a blog?</summary>
+            <p>Yep—open <a href="blog.html">Blog</a>. Posts are rendered from JSON in <code>script.js</code>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+      <div class="container card card-inset">
+        <div class="cta-inner">
+          <h2>Ready to build something great?</h2>
+          <p class="muted">Use NovaKit as a base for multiple template styles.</p>
+        </div>
+        <div>
+          <a class="btn" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#"><span class="brand-logo" aria-hidden="true">✦</span> NovaKit</a>
+        <p class="muted small">© <span id="year"></span> NovaKit. All rights reserved.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <form class="newsletter" id="newsletter-form" novalidate>
+        <label for="nl-email" class="small">Join our newsletter</label>
+        <div class="input-row">
+          <input id="nl-email" name="email" type="email" placeholder="you@example.com" required />
+          <button class="btn">Subscribe</button>
+        </div>
+        <p id="nl-feedback" class="small muted" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
